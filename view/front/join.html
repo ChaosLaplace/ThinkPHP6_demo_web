@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="renderer" content="webkit" />
-    <link href="/static/front/image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="/static/front/css/common.css?t=1566375920" /><link rel="stylesheet" type="text/css" href="/static/front/css/attr.css?t=1566878253" /><link rel="stylesheet" type="text/css" href="/static/front/css/module.css?t=1567153848" /><link rel="stylesheet" type="text/css" href="/static/front/css/swiper.min.css?t=1566300614" /><link rel="stylesheet" type="text/css" href="/static/front/css/join.css?t=1566987138" /></head>
 
 <body>
@@ -419,53 +419,45 @@
         if(isSubmit){
             return false;
         }
-        // if(!$('#type').val()){
-        //     alert('请选择加入意向');
-        //     return false;
-        // }
-        // if(!$('#city_name').val()){
-        //     alert('请选择请选择城市');
-        //     return false;
-        // }
-        // if(!$('#true_name').val()){
-        //     alert('请填写真实姓名');
-        //     return false;
-        // }
-        // if(!$('#sex').val()){
-        //     alert('请选择性别');
-        //     return false;
-        // }
-        // if(!$('#mobile').val()){
-        //     alert('请填写手机号码');
-        //     return false;
-        // }
-        // var myreg=/^[1][0-9]{10}$/;
-        // if (!myreg.test($('#mobile').val())){
-        //     alert('手机号格式错误');
-        //     return false;
-        // }
-        // var fileInput = $('#file').get(0).files[0];
-        // if(!fileInput){
-        //     alert('请上传照片');
-        //     return false;
-        // }
+        if(!$('#type').val()){
+            alert('请选择加入意向');
+            return false;
+        }
+        if(!$('#city_name').val()){
+            alert('请选择请选择城市');
+            return false;
+        }
+        if(!$('#true_name').val()){
+            alert('请填写真实姓名');
+            return false;
+        }
+        if(!$('#sex').val()){
+            alert('请选择性别');
+            return false;
+        }
+        if(!$('#mobile').val()){
+            alert('请填写手机号码');
+            return false;
+        }
+        var myreg=/^[1][0-9]{10}$/;
+        if (!myreg.test($('#mobile').val())){
+            alert('手机号格式错误');
+            return false;
+        }
+        var fileInput = $('#file').get(0).files[0];
+        if(!fileInput){
+            alert('请上传照片');
+            return false;
+        }
 
         isSubmit = true;
         var data = new FormData();
-            // data.append("type", $('#type').val());
-            // data.append("city_name",$("#city_name").val());
-            // data.append("true_name",$("#true_name").val());
-            // data.append("sex",$("#sex").val());
-            // data.append("mobile",$("#mobile").val());
-            // data.append("remark",$("#remark").val());
-            // data.append("head_pic",$("#file").get(0).files[0]);
-
-            data.append("type", "0");
-            data.append("city_name","西安");
-            data.append("true_name","dfsdf");
-            data.append("sex","1");
-            data.append("mobile","16521689419");
-            data.append("remark","");
+            data.append("type", $('#type').val());
+            data.append("city_name",$("#city_name").val());
+            data.append("true_name",$("#true_name").val());
+            data.append("sex",$("#sex").val());
+            data.append("mobile",$("#mobile").val());
+            data.append("remark",$("#remark").val());
             data.append("head_pic",$("#file").get(0).files[0]);
 
         $.ajax({

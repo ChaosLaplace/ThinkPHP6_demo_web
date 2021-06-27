@@ -19,6 +19,7 @@ Route::get('/entertainment', 'front/entertainment'); // 娱乐演艺
 Route::get('/cooperation', 'front/cooperation'); // 商务合作
 Route::get('/about', 'front/about'); // 关于我们
 Route::get('/join', 'front/join'); // 马上加入
+Route::get('/api', 'front/api'); // 
 
 // 後台
 Route::get('/back', 'back/index');
