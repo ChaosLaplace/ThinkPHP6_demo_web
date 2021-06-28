@@ -228,8 +228,8 @@
                         <div class="form-item">
                             <select name="sex" id="sex">
                                 <option value="" class="placeholder-style" disabled selected>性别</option>
+                                <option value="0">女</option>
                                 <option value="1">男</option>
-                                <option value="2">女</option>
                             </select>
                         </div>
                         <div class="form-item">
@@ -462,7 +462,7 @@
 
         $.ajax({
             url: '/frontapi/join', // 马上加入 api
-            type: 'post',
+            type: 'POST',
             contentType: false,
             data: data ,
             processData: false,

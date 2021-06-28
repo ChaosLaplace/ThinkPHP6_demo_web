@@ -27,4 +27,6 @@ Route::get('/join', 'front/join'); // 馬上加入
 Route::get('/api', 'front/api'); // api
 
 // 後台
-Route::get('/back', 'back/index');
+Route::get('/back', 'back/index'); // 首頁
+Route::get('/searchprofile', 'back/searchprofile'); // 搜尋簡歷
+Route::get('/saveprofile', 'back/saveprofile'); // 更新簡歷

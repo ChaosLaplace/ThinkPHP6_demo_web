@@ -39,7 +39,7 @@ class FrontApi extends BaseController
                             'head_pic' => $file_name,
                             'head_pic_path' => $file_path,
                         ];
-                        // 寫入DB
+                        // 寫入 DB
                         $member = new Member();
                         $member->member_create($data);
 

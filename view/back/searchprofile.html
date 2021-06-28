@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> - 标签墙</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="/static/back/image/favicon.ico"> <link href="/static/back/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/static/back/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="/static/back/css/animate.css" rel="stylesheet">
+    <link href="/static/back/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <ul class="notes">                    
+                    {foreach $data as $k => $v}
+                    <li>
+                        <div>
+                            <img src="{$v.image}">
+                            <small>性别 : {$v.sex}</small>
+                            <h4>姓名 : {$v.true_name}</h4>
+                            <p>意向 : {$v.type}</p>
+                            <p>城市 : {$v.city_name}</p>
+                            <p>手机 : {$v.mobile}</p>
+                            <p>提交时间 : {$v.create}</p>
+                            <p>补充说明 : {$v.remark}</p>
+                            <button id="button" onclick="saveprofile()" value="{$v.id}"><i class="fa fa-trash-o "></i></button>
+                            <!-- <a href="/saveprofile?id={$v.id}"><i class="fa fa-trash-o "></i></a> -->
+                        </div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="/static/back/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/static/back/js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="/static/back/js/content.js?v=1.0.0"></script>
+    <!-- 更新簡歷 -->
+    <script>
+        function saveprofile()
+        {
+            var data = $("#button").attr("value");
+            $.ajax({
+                url: '/saveprofile?id=' + data, // 更新簡歷
+                type: 'GET',
+                success: function(data) {
+                    alert(data.msg);
+                    if(data.code == 1) {
+                        location.reload();
+                    }
+                },
+                error: function(err) {
+                    alert('提交失败，请稍后再试');
+                }
+            });
+            return true;
+        }
+    </script>
+</body>
+</html>
