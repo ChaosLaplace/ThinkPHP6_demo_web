@@ -2,18 +2,19 @@
 <html lang="zh">
 
 <head>
-    <title>11就是小ee-热度传媒-综合型网红新媒体商业公司</title>
+    <title>{$nickname}-热度传媒-综合型网红新媒体商业公司</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="renderer" content="webkit" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="/static/front/css/common.css?t=1566375920" /><link rel="stylesheet" type="text/css" href="/static/front/css/attr.css?t=1566878253" /><link rel="stylesheet" type="text/css" href="/static/front/css/module.css?t=1567153848" /><link rel="stylesheet" type="text/css" href="/static/front/css/swiper.min.css?t=1566300614" />    <style>
-        body {
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-    </style>
+        <link rel="stylesheet" type="text/css" href="/static/front/css/common.css?t=1566375920" /><link rel="stylesheet" type="text/css" href="/static/front/css/attr.css?t=1566878253" /><link rel="stylesheet" type="text/css" href="/static/front/css/module.css?t=1567153848" /><link rel="stylesheet" type="text/css" href="/static/front/css/swiper.min.css?t=1566300614" />
+        <style>
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        </style>
 <script type="text/javascript">
     var ey_1564127251 = {"ClosePage":0,"get_url":"\/api\/Ajax\/get_arcrank\/aid\/22.html"};
 </script>
@@ -25,11 +26,11 @@
     <div>
         <div class="flex">
             <picture class="dailog-thumb" style="margin-right: 20px;">
-                <img src="/static/front/image/149934563fa159997818320f0af91587.jpg" alt="11就是小ee">
+                <img src="{$image}" alt="{$nickname}">
             </picture>
             <div class="talent-intro flex-1 flex flex-column flex-center">
                 <h4 class="talent-name font-24 color-333 flex flex-align-center">
-                    <span>昵称：11就是小ee</span>
+                    <span>昵称：{$nickname}</span>
                     <!--                     <span class="tags">御姐</span>
                      -->
                 </h4>
@@ -52,15 +53,15 @@
                 <!--                <p class="font-14 color-333 m-b-10">直播平台：</p>-->
                 <p class="font-14">
                     <span class="color-999">ID：</span>
-                    <span class="color-333">2211yi</span>
+                    <span class="color-333">{$id}</span>
                 </p>
                 <div class="flex flex-align-center m-b-10 m-t-10 tags-list">
                     <span class="font-14 color-999">直播风格：</span>
-                                        <span class="tags">御姐</span>
+                                        <span class="tags">{$type}</span>
                                     </div>
                 <p class="font-14 color-333">
                     <span class="color-999">直播时段：</span>
-                    <span class="color-333">23:00</span>
+                    <span class="color-333">{$time}</span>
                 </p>
             </div>
         </div>

@@ -8,11 +8,6 @@ class Front
     // 首页
     public function index()
     {
-        // 或者批量赋值
-        // View::assign([
-        //     'name' => 'ThinkPHP',
-        //     'email' => 'thinkphp@qq.com',
-        // ]);
         return View::fetch();
     }
     // 短视频
