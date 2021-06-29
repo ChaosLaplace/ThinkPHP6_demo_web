@@ -30,7 +30,7 @@ class Back extends BaseController
                     'sex' => ($v['sex'] == 0) ? '女' : '男',
                     'mobile' => $v['mobile'],
                     'remark' => $v['remark'],
-                    'image' => $v['head_pic_path'] . $v['head_pic'],
+                    'image' => '/static/upload/' . $v['head_pic'],
                     'create' => $v['create'],
                 ];
             }

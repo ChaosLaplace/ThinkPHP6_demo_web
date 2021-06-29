@@ -36,8 +36,7 @@ class FrontApi extends BaseController
                             'sex' => $param['sex'],
                             'mobile' => $param['mobile'],
                             'remark' => $param['remark'],
-                            'head_pic' => $file_name,
-                            'head_pic_path' => $file_path,
+                            'head_pic' => $file_name
                         ];
                         // 寫入 DB
                         $member = new Member();

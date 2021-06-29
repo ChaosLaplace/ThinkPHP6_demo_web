@@ -19,18 +19,18 @@ USE `tp6_demo`;
 
 -- 傾印  資料表 tp6_demo.think6_member 結構
 CREATE TABLE IF NOT EXISTS `think6_member` (
-  `index` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type` tinyint(1) unsigned NOT NULL COMMENT '加入意向',
   `city_name` varchar(30) NOT NULL COMMENT '城市',
   `true_name` varchar(30) NOT NULL COMMENT '姓名',
   `sex` tinyint(1) unsigned NOT NULL COMMENT '性別',
   `mobile` varchar(30) NOT NULL COMMENT '手機',
-  `remark` varchar(50) DEFAULT '無' COMMENT '補充說明',
+  `remark` varchar(50) DEFAULT '' COMMENT '補充說明',
   `head_pic` varchar(50) NOT NULL COMMENT '圖片名稱',
-  `head_pic_path` varchar(50) NOT NULL COMMENT '圖片路徑',
+  `status` tinyint(1) unsigned NOT NULL COMMENT '是否刪除',
   `create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '建立時間',
   `update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
-  PRIMARY KEY (`index`)
+  PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- 正在傾印表格  tp6_demo.think6_member 的資料：0 rows
