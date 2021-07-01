@@ -14,10 +14,10 @@ use think\facade\Route;
 Route::get('/', 'front/index'); // 首頁
 
 Route::get('/video', 'front/video'); // 短視頻
-Route::get('/videomember', 'FrontVideo/index'); // 短視頻顯示成員
+Route::get('/videomember', 'front_video/index'); // 短視頻顯示成員
 
 Route::get('/live', 'front/live'); // 熱度直播
-Route::get('/livemember', 'frontlive/index'); // 熱度直播顯示成員
+Route::get('/livemember', 'front_live/index'); // 熱度直播顯示成員
 
 Route::get('/market', 'front/market'); // 網紅店商
 Route::get('/entertainment', 'front/entertainment'); // 娛樂演藝

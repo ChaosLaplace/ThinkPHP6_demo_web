@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `think6_member` (
   `mobile` varchar(30) NOT NULL COMMENT '手機',
   `remark` varchar(50) DEFAULT '' COMMENT '補充說明',
   `head_pic` varchar(50) NOT NULL COMMENT '圖片名稱',
-  `status` tinyint(1) unsigned NOT NULL COMMENT '是否刪除',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否刪除',
   `create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '建立時間',
   `update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
   PRIMARY KEY (`id`) USING BTREE
